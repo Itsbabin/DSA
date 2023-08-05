@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std ;
-// creating Node class for node data type
+
 class Node
 {
 public:
@@ -13,7 +13,7 @@ public:
         right = NULL;
         left = NULL;
     }
-    
+
     void insertElimentInBST(int val){
          Node *prev = NULL;
          Node *curr = this;
@@ -48,34 +48,39 @@ public:
         }
         
     }
-
-     void InOrderTraversal(){
-        if(this != NULL){
-            this->left->InOrderTraversal();
-            cout << this->data << " ";
-            this->right->InOrderTraversal();
-        }
-     }
 };
 
-int main()
-{
+bool isBST (Node* root){
+    if(root->right == NULL && root->left == NULL){
+        return true;
+    }
 
-    Node *a1 = new Node(15);
-    /*          15
-              /    \
-            9      18
-           / \    /  \
-          5  10 17   20    */
-    // linking nodes of BST
-    a1->InOrderTraversal();
-    cout << endl ;
-    a1->insertElimentInBST(9);
-    a1->insertElimentInBST(10);
-    a1->insertElimentInBST(20);
-    a1->insertElimentInBST(17);
-    a1->insertElimentInBST(5);
-    a1->insertElimentInBST(18);
-    a1->InOrderTraversal();
-     return 0 ;
+    if ((root->right->data < root->data && root->right != NULL) || (root->left->data > root->data && root->left != NULL)){
+        return false;
+    }
+    if ((root->right->data > root->data && root->right != NULL) || (root->left->data < root->data && root->left != NULL)){
+        
+    }
+    // if(root->right != NULL){
+    //   bool is = isBST(root->right);
+    //   return  is;
+    // }
+    // if(root->left != NULL){
+    //   bool is = isBST(root->left);
+    //   return  is;
+    // }
+}
+
+ int main() {
+    Node* a1 = new Node(5);
+    a1->insertElimentInBST(3);
+    a1->insertElimentInBST(4);
+    a1->insertElimentInBST(2);
+    a1->insertElimentInBST(8);
+    a1->insertElimentInBST(7);
+    a1->insertElimentInBST(6);
+      bool i = isBST(a1);
+      cout << i << endl;
+  
+   return 0 ;
 }
