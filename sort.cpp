@@ -131,7 +131,7 @@ print_arr(arr , sizeof(arr)/sizeof(arr[0]));
 // insertion_sort(arr , sizeof(arr)/sizeof(arr[0]));
 // selection_sort(arr , sizeof(arr)/sizeof(arr[0]));
 // quick_sort(arr , 0, sizeof(arr)/sizeof(arr[0])-1);
-// merge_sort(arr , 0, sizeof(arr)/sizeof(arr[0])-1);   not avail able todo!!!
+// merge_sort(arr , 0, sizeof(arr)/sizeof(arr[0])-1);  // not avail able todo!!!
 count_sort(arr ,sizeof(arr)/sizeof(arr[0]));
 print_arr(arr , sizeof(arr)/sizeof(arr[0]));
      return 0 ;
