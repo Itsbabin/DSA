@@ -58,7 +58,7 @@ using namespace std ;
     a6->left = a5;
     a6->right = a8;
     a8->left = a7;
-
+    
     /* InOrder traversal of a BST is sorted list of 
             value in assending order  */
     a4->InOrderTraversal();

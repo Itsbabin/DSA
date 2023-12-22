@@ -1,31 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std ;
 
-int findfibo (int a){
-
-    if(a==1){
-        return 0;
-    }
-    else if(a==2){
-        return 1;
-    }
-    else{
-
-    int tem1 = findfibo(a-1);
-    int tem2 = findfibo(a-2);
-        
-        return (tem1+tem2);
-    }
-
-}
 
  int main() {
-    int a ;
-    cout << "enter a value" << endl;
-    cin >> a ;
-    int b = findfibo(a);
 
-    cout << b << endl;
-    
-     return 0 ;
+    string name = "11011" ;
+
+   //  string new_name = name.substr(4);
+
+
+   bitset<32> binaryNumber(name);
+   int decimalNumber = static_cast<int>(binaryNumber.to_ulong());
+
+    cout << decimalNumber << endl;
+
+
+   return 0 ;
 }
